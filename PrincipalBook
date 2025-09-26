@@ -1,0 +1,32 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package principal;
+
+/**
+ *
+ * @author Janus
+ */
+public class PrincipalBook {
+    public static void main(String[] args) {
+        
+    book b1 = new book("El Quijote", "Cervantes", 500);
+        book b2 = new book("Cien años de soledad", "García Márquez", 400);
+        book b3 = new book("1984", "George Orwell", 300);
+        book b4 = new book("El Hobbit", "Tolkien", 350);
+
+        
+        book[] listaBooks = {b1, b2, b3, b4};
+
+        
+        int totalPaginas = book.calcularPageCount(listaBooks);
+
+        
+        double promedioPaginas = book.promedioPageCount(listaBooks);
+
+       
+        System.out.println("Total de páginas de todos los libros: " + totalPaginas);
+        System.out.println("Promedio de páginas por libro: " + promedioPaginas);
+    }
+}
