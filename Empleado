@@ -1,0 +1,43 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package principal;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Janus
+ */
+public class Empleado {
+public String nombre;
+public double tarifaHora;
+public int[]  horas;
+
+    public Empleado(String nombre, double tarifaHora, int[] horas) {
+        this.nombre = nombre;
+        this.tarifaHora = tarifaHora;
+        this.horas = horas;
+    }
+
+public int calcularHoras(){
+    int total = 0;
+    for(int h : horas){
+        total += h;
+    }
+    return total;
+}
+
+public double calcularSalario(){
+    return calcularHoras() * tarifaHora; 
+}
+
+public static double totalEmpresa(Empleado[] empleados){
+    int total = 0;
+    for(Empleado e : empleados){
+        total +=e.calcularHoras();
+    }
+    return total;
+}  
+}
