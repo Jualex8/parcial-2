@@ -1,0 +1,49 @@
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package principal;
+
+/**
+ *
+ * @author Janus
+ */
+public class estudiante {
+    public String nombre;
+    public String asignatura;
+    public double cafilificacionFinal;
+
+    public estudiante(String nombre, String asignatura, double cafilificacionFinal) {
+        this.nombre = nombre;
+        this.asignatura = asignatura;
+        this.cafilificacionFinal = cafilificacionFinal;
+    }
+    
+    public double getcafilificacionFinal(){
+        return cafilificacionFinal;
+    }
+    
+    public String aprueba(){
+        return cafilificacionFinal >=3.0 ? "aprueba" : "desaprueba";
+    }
+    
+    public static double notaAlta(estudiante[] estudiantes){
+        double mayor = estudiantes[0].getcafilificacionFinal();
+        for (estudiante e : estudiantes){
+            if(e.getcafilificacionFinal() > mayor){
+                mayor = e.getcafilificacionFinal();
+            }
+        }
+        return mayor;
+    }
+    public static double notaBaja(estudiante[] estudiantes){
+        double menor = estudiantes[0].getcafilificacionFinal();
+        for (estudiante e : estudiantes){
+            if(e.getcafilificacionFinal() < menor){
+                menor = e.getcafilificacionFinal();
+            }
+        }
+        return menor;
+    }      
+}
