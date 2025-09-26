@@ -1,0 +1,30 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package principal;
+
+/**
+ *
+ * @author Janus
+ */
+public class principalPersona {
+    public static void main(String[] args) {
+    Persona persona1 = new Persona("jualex", "manzur",1000000000);
+        System.out.println(persona1.verificarDocumento());
+    Persona persona2 = new Persona("jualex", "manzur",100000000);
+    System.out.println(persona2.verificarDocumento());
+    Persona persona3 = new Persona("jualex", "manzur",1000000000);
+    System.out.println(persona3.verificarDocumento());
+    
+    Persona[] listaPersonas ={persona1,persona2,persona3};
+    
+    int resultado = Persona.cantidadDocumentos(listaPersonas);
+    
+        System.out.println("cantidad menor al millon " + resultado);
+        
+    }
+    
+    
+    
+}
