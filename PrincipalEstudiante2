@@ -1,0 +1,27 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package principal;
+
+/**
+ *
+ * @author Janus
+ */
+public class PrincipalEstudiante2 {
+    public static void main(String[] args) {
+        String[][] materias = {
+            {"Matemáticas", "4.5"},
+            {"Programación", "3.8"},
+            {"Física", "2.9"},
+            {"Historia", "4.2"}
+        };
+
+        Estudiante2 e1 = new Estudiante2("2025A001", materias);
+
+        System.out.println("Código: " + e1.getCodigo());
+        System.out.println("Promedio: " + e1.calcularPromedio());
+        System.out.println("Mejor materia: " + e1.mejorMateria());
+        System.out.println("Peor materia: " + e1.peorMateria());
+    }
+}
