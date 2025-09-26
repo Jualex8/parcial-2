@@ -1,0 +1,29 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package principal;
+
+
+
+/**
+ *
+ * @author Janus
+ */
+public class vehiculos {
+public String nombre;
+public String modelo;
+public int año;
+
+    public vehiculos(String nombre, String modelo, int año) {
+        this.nombre = nombre;
+        this.modelo = modelo;
+        this.año = año;
+    }
+
+public int calcular(){
+    int añoActual = 2025;
+    añoActual-=año;
+    return añoActual;
+}
+}
