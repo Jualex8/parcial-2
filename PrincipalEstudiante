@@ -1,0 +1,31 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package principal;
+
+/**
+ *
+ * @author Janus
+ */
+public class PrincipalEstudiante {
+    public static void main(String[] args) {
+        estudiante e1 = new estudiante("Ana", "Matemáticas", 2.8);
+        estudiante e2 = new estudiante("Luis", "Historia", 3.5);
+        estudiante e3 = new estudiante("Carlos", "Física", 4.7);
+        estudiante e4 = new estudiante("María", "Química", 1.9);
+
+        
+        estudiante[] listaEstudiantes = {e1, e2, e3, e4};
+
+        
+        for (estudiante e : listaEstudiantes) {
+            System.out.println(e.nombre + " en " + e.asignatura + " con nota " 
+            + e.getcafilificacionFinal() + " → " + e.aprueba());
+        }
+
+        // Mostrar la nota más alta y la más baja
+        System.out.println("\nNota más alta: " + estudiante.notaAlta(listaEstudiantes));
+        System.out.println("Nota más baja: " + estudiante.notaBaja(listaEstudiantes));
+    }
+}
