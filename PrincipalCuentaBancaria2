@@ -1,0 +1,39 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package principal;
+
+/**
+ *
+ * @author Janus
+ */
+public class PrincipalCuentaBancaria2 {
+    public static void main(String[] args) {
+       CuentaBancaria ususuario1 = new CuentaBancaria("jualex","412342134",100000);
+       CuentaBancaria ususuario2 = new CuentaBancaria("jualex","412342134",100000);
+       
+       System.out.print("¿Cuánto desea retirar?: ");
+        double monto = sc.nextDouble();
+       
+       ususuario1.depositar(monto);
+
+System.out.print("¿Cuánto desea retirar?: ");
+        double monto2 = sc.nextDouble();
+
+       ususuario1.retirar(monto2);
+
+System.out.print("¿Cuánto desea retirar?: ");
+        double monto3 = sc.nextDouble();
+       
+       ususuario2.depositar(monto3);
+
+System.out.print("¿Cuánto desea retirar?: ");
+        double monto4 = sc.nextDouble();
+
+       ususuario2.retirar(monto4);
+      
+       
+       
+    }
+}
