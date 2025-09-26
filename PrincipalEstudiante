@@ -14,6 +14,7 @@ public class PrincipalesEmpleado {
         int[] horas2 = {7, 7, 8, 7, 6};
         int[] horas3 = {9, 8, 8, 8, 7};
 
+        
         Empleado e1 = new Empleado("Ana", 10000, horas1);
         Empleado e2 = new Empleado("Luis", 12000, horas2);
         Empleado e3 = new Empleado("Pedro", 9000, horas3);
@@ -26,12 +27,15 @@ public class PrincipalesEmpleado {
             System.out.println("Empleado: " + e.nombre);
             System.out.println("Total horas: " + e.calcularHoras());
             System.out.println("Salario semanal: $" + e.calcularSalario());
-            System.out.println("-----------------------------");
+            System.out.println("Día con más trabajo: " + e.diaMasTrabajo());
+            System.out.println("Día con menos trabajo: " + e.diaMenosTrabajo());
+            System.out.println("----------------------------------");
         }
 
         
-        double totalHoras = Empleado.totalEmpresa(empleados);
-        System.out.println("Total de horas trabajadas en la empresa: " + totalHoras);
+        double totalEmpresa = Empleado.totalEmpresa(empleados);
+        System.out.println("Total que la empresa debe pagar: $" + totalEmpresa);
 
     }
 }
+
