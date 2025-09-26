@@ -1,0 +1,46 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package principal;
+
+/**
+ *
+ * @author Janus
+ */
+public class CuentaBancaria2 {
+public String nombreCliente;
+public String documento;
+public double saldo;
+
+    public CuentaBancaria2(String nombreCliente, String documento, double saldo) {
+        this.nombreCliente = nombreCliente;
+        this.documento = documento;
+        this.saldo = saldo;
+    }
+
+
+public void depositar(double monto) {
+        if (monto > 0) {
+            saldo += monto;
+            System.out.println("deposito exitoso de $" + monto);
+            System.out.println("Saldo restante: $" + saldo);
+        } else {
+            System.out.println("Fondos insuficientes o monto inválido.");
+        }
+
+}
+    public void retirar(double monto) {
+        if (monto > 0 && monto <= saldo) {
+            saldo -= monto;
+            System.out.println("Retiro exitoso de $" + monto);
+            System.out.println("Saldo restante: $" + saldo);
+        } else {
+            System.out.println("Fondos insuficientes o monto inválido.");
+        }
+    }
+public void mostrarSaldo() {
+        System.out.println("Saldo actual: $" + saldo);
+
+}
+}
