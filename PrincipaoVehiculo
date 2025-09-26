@@ -1,0 +1,17 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package principal;
+
+/**
+ *
+ * @author Janus
+ */
+public class PrincipaoVehiculo {
+    public static void main(String[] args) {
+        vehiculos vehiculo1 = new vehiculos("picanto","kia",2007);
+        
+        System.out.println("años trascurridos " + vehiculo1.calcular());
+    }
+}
