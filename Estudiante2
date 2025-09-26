@@ -1,0 +1,58 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package principal;
+
+/**
+ *
+ * @author Janus
+ */
+public class Estudiante2 {
+    public String codigo;
+    public String[][] materias; 
+
+    public Estudiante2(String codigo, String[][] materias) {
+        this.codigo = codigo;
+        this.materias = materias;
+    }
+
+    public double calcularPromedio() {
+        double suma = 0;
+        for (String[] fila : materias) {
+            double nota = Double.parseDouble(fila[1]);
+            suma += nota;
+        }
+        return suma / materias.length;
+    }
+
+    public String mejorMateria() {
+        String mejor = materias[0][0];
+        double notaMayor = Double.parseDouble(materias[0][1]);
+        for (String[] fila : materias) {
+            double nota = Double.parseDouble(fila[1]);
+            if (nota > notaMayor) {
+                notaMayor = nota;
+                mejor = fila[0];
+            }
+        }
+        return mejor + " (" + notaMayor + ")";
+    }
+
+    public String peorMateria() {
+        String peor = materias[0][0];
+        double notaMenor = Double.parseDouble(materias[0][1]);
+        for (String[] fila : materias) {
+            double nota = Double.parseDouble(fila[1]);
+            if (nota < notaMenor) {
+                notaMenor = nota;
+                peor = fila[0];
+            }
+        }
+        return peor + " (" + notaMenor + ")";
+    }
+
+    public String getCodigo() {
+        return codigo;
+}
+}
