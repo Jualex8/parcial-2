@@ -1,0 +1,25 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package principal;
+
+/**
+ *
+ * @author Janus
+ */
+public class PrincipalProducto {
+    public static void main(String[] args) {
+        Producto producto1 = new Producto("papa",600,20);
+        
+        System.out.println("" + producto1.info());
+        
+        producto1.añadir(5);
+        
+        System.out.println("" + producto1.info());
+        
+        producto1.retirar(2);
+        
+        System.out.println("" + producto1.info());
+    }
+}
