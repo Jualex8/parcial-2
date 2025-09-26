@@ -12,8 +12,10 @@ import java.util.Scanner;
  */
 public class Empleado {
 public String nombre;
-public double tarifaHora;
-public int[]  horas;
+    public double tarifaHora;
+    public int[] horas; 
+    
+    private static final String[] DIAS = {"Lunes", "Martes", "Miércoles", "Jueves", "Viernes"};
 
     public Empleado(String nombre, double tarifaHora, int[] horas) {
         this.nombre = nombre;
@@ -21,23 +23,49 @@ public int[]  horas;
         this.horas = horas;
     }
 
-public int calcularHoras(){
-    int total = 0;
-    for(int h : horas){
-        total += h;
+    public int calcularHoras() {
+        int total = 0;
+        for (int h : horas) {
+            total += h;
+        }
+        return total;
     }
-    return total;
-}
 
-public double calcularSalario(){
-    return calcularHoras() * tarifaHora; 
-}
-
-public static double totalEmpresa(Empleado[] empleados){
-    int total = 0;
-    for(Empleado e : empleados){
-        total +=e.calcularHoras();
+    public double calcularSalario() {
+        return calcularHoras() * tarifaHora;
     }
-    return total;
+
+    public static double totalEmpresa(Empleado[] empleados) {
+        double total = 0;
+        for (Empleado e : empleados) {
+            total += e.calcularSalario();
+        }
+        return total;
+    }
+
+    
+    public String diaMasTrabajo() {
+        int max = horas[0];
+        int index = 0;
+        for (int i = 1; i < horas.length; i++) {
+            if (horas[i] > max) {
+                max = horas[i];
+                index = i;
+            }
+        }
+        return DIAS[index] + " con " + max + " horas";
+    }
+
+   
+    public String diaMenosTrabajo() {
+        int min = horas[0];
+        int index = 0;
+        for (int i = 1; i < horas.length; i++) {
+            if (horas[i] < min) {
+                min = horas[i];
+                index = i;
+            }
+        }
+        return DIAS[index] + " con " + min + " horas";
 }  
 }
