@@ -1,0 +1,37 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package principal;
+
+/**
+ *
+ * @author Janus
+ */
+public class book {
+public String title;
+public String author;
+public int pageCount;
+
+    public book(String title, String author, int pageCount) {
+        this.title = title;
+        this.author = author;
+        this.pageCount = pageCount;
+    }
+
+public int getPageCount(){
+    return pageCount;
+}
+
+public static int calcularPageCount(book[] books){
+    int suma = 0;
+    for(book b : books){
+        suma+=b.getPageCount();
+    }
+    return suma;
+}
+public static double promedioPageCount(book[] books){
+    return (double) calcularPageCount(books)/books.length;
+} 
+}
+   
