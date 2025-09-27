@@ -1,0 +1,23 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package principal;
+
+/**
+ *
+ * @author Janus
+ */
+public class PrincipalAlummno {
+    public static void main(String[] args) {
+        Alumno a1 = new Alumno("Ana", true);
+        Alumno a2 = new Alumno("Luis", false);
+        Alumno a3 = new Alumno("Marta", true);
+        Alumno a4 = new Alumno("Carlos", true);
+        Alumno a5 = new Alumno("Laura", false);
+
+        Alumno[] lista = {a1, a2, a3, a4, a5};
+
+        Alumno.contarAsistencias(lista);
+    }
+}
