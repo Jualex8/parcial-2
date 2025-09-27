@@ -1,0 +1,33 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package principal;
+
+/**
+ *
+ * @author Janus
+ */
+public class Alumno {
+    public String nombre;
+    public boolean asistio;
+
+    public Alumno(String nombre, boolean asistio) {
+        this.nombre = nombre;
+        this.asistio = asistio;
+    }
+
+    public static void contarAsistencias(Alumno[] alumnos) {
+        int asistieron = 0;
+        int faltaron = 0;
+
+        for (Alumno a : alumnos) {
+            if (a.asistio) asistieron++;
+            else faltaron++;
+        }
+
+        System.out.println("Total alumnos: " + alumnos.length);
+        System.out.println("Asistieron: " + asistieron);
+        System.out.println("Faltaron: " + faltaron);
+    }
+}
