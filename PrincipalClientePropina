@@ -1,0 +1,29 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package principal;
+
+/**
+ *
+ * @author Janus
+ */
+public class PrincipalClientePropina {
+    public static void main(String[] args) {
+        ClientePropina c1 = new ClientePropina("Ana", "F", 25, 50000, 10);
+        ClientePropina c2 = new ClientePropina("Luis", "M", 17, 30000, 0);
+        ClientePropina c3 = new ClientePropina("Marta", "F", 19, 45000, 5);
+        ClientePropina c4 = new ClientePropina("Pedro", "M", 30, 60000, 12);
+
+        ClientePropina[] lista = {c1, c2, c3, c4};
+
+        for (ClientePropina c : lista) {
+            System.out.println(c.nombre + " - Cuenta: $" + c.cuenta +
+                               " Propina: $" + c.propina +
+                               " Total: $" + c.totalConPropina());
+        }
+
+        System.out.println();
+        ClientePropina.resumen(lista);
+    }
+}
