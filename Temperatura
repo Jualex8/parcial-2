@@ -1,0 +1,35 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package principal;
+
+/**
+ *
+ * @author Janus
+ */
+public class Temperatura {
+    public String doctor;
+    public double[] celsius;
+
+    public Temperatura(String doctor, double[] celsius) {
+        this.doctor = doctor;
+        this.celsius = celsius;
+    }
+
+    public double[] convertirAFahrenheit() {
+        double[] fahrenheit = new double[celsius.length];
+        for (int i = 0; i < celsius.length; i++) {
+            fahrenheit[i] = (celsius[i] * 9 / 5) + 32;
+        }
+        return fahrenheit;
+    }
+
+    public double promedio() {
+        double suma = 0;
+        for (double c : celsius) {
+            suma += c;
+        }
+        return suma / celsius.length;
+    }
+}
