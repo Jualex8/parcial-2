@@ -1,0 +1,27 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package principal;
+
+/**
+ *
+ * @author Janus
+ */
+public class PrincipalTemperatura {
+    public static void main(String[] args) {
+        Temperatura doc1 = new Temperatura("Dr. Juan", new double[]{36.5, 37.0, 38.2});
+        Temperatura doc2 = new Temperatura("Dra. Ana", new double[]{35.8, 36.2, 36.7});
+
+        Temperatura[] doctores = {doc1, doc2};
+
+        for (Temperatura d : doctores) {
+            System.out.println("\n" + d.doctor);
+            double[] fahrenheit = d.convertirAFahrenheit();
+            for (double f : fahrenheit) {
+                System.out.println("F: " + f);
+            }
+            System.out.println("Promedio en Celsius: " + d.promedio());
+    }
+    }
+}
