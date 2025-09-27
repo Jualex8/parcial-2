@@ -1,0 +1,45 @@
+package principal;
+
+public class ClientePropina {
+    public String nombre;
+    public String genero; // "M" o "F"
+    public int edad;
+    public double cuenta;
+    public double propina;
+
+    public ClientePropina (String nombre, String genero, int edad, double cuenta, double porcentajePropina) {
+        this.nombre = nombre;
+        this.genero = genero;
+        this.edad = edad;
+        this.cuenta = cuenta;
+        this.propina = cuenta * porcentajePropina / 100;
+    }
+
+    public double totalConPropina() {
+        return cuenta + propina;
+    }
+
+    public static void resumen(ClientePropina [] clientes) {
+        int conPropina = 0, sinPropina = 0, mujeres = 0, menores = 0;
+        ClientePropina  mayorPropina = clientes[0];
+        ClientePropina  menorPropina = clientes[0];
+
+        for (ClientePropina  c : clientes) {
+            if (c.propina > 0) conPropina++;
+            else sinPropina++;
+
+            if (c.propina > mayorPropina.propina) mayorPropina = c;
+            if (c.propina < menorPropina.propina) menorPropina = c;
+
+            if (c.genero.equalsIgnoreCase("F")) mujeres++;
+            if (c.edad < 18) menores++;
+        }
+
+        System.out.println("Clientes con propina: " + conPropina);
+        System.out.println("Clientes sin propina: " + sinPropina);
+        System.out.println("Mayor propina: " + mayorPropina.nombre + " $" + mayorPropina.propina);
+        System.out.println("Menor propina: " + menorPropina.nombre + " $" + menorPropina.propina);
+        System.out.println("Mujeres: " + mujeres);
+        System.out.println("Menores de edad: " + menores);
+    }
+}
